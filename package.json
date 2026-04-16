@@ -1,16 +1,26 @@
 {
-    "name": "dawn-persona",
-    "version": "0.0.1",
-    "description": "persaon lettabot",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "tsc && tsc-alias && node dist/index.js"
+    "name": "anaxagoras",
+    "version": "0.1.0",
+    "description": "Generate Zod schemas from AT Protocol lexicon files",
+    "type": "module",
+    "bin": {
+        "anaxagoras": "./dist/cli.js"
     },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsc --watch",
+        "lint": "eslint .",
+        "format": "prettier --write 'src/**/*.ts'"
+    },
+    "keywords": ["atproto", "lexicon", "zod", "codegen"],
+    "license": "MIT",
     "packageManager": "pnpm@10.18.0",
+    "engines": {
+        "node": ">=20.0.0"
+    },
+    "dependencies": {
+        "fast-glob": "^3.3.3"
+    },
     "devDependencies": {
         "@eslint/js": "^9.37.0",
         "@types/node": "^24.7.1",
@@ -18,9 +28,6 @@
         "globals": "^16.4.0",
         "jiti": "^2.6.1",
         "prettier": "^3.6.2",
-        "ts-node": "^10.9.2",
-        "tsc-alias": "^1.8.16",
-        "tsconfig-paths": "^4.2.0",
         "typescript": "^5.9.3",
         "typescript-eslint": "^8.46.0"
     }
