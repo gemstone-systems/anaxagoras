@@ -26,5 +26,5 @@ export async function write(
 
     await writeFile(join(outputDir, "index.ts"), exports + "\n", "utf-8");
 
-    console.log(`Wrote ${files.length} file(s) to ${outputDir}`);
+    console.log(`Wrote ${files.length.toString()} file(s) to ${outputDir}`);
 }

@@ -4,7 +4,7 @@
     "description": "Generate Zod schemas from AT Protocol lexicon files",
     "type": "module",
     "bin": {
-        "anaxagoras": "./dist/cli.js"
+        "anaxa": "./dist/cli.js"
     },
     "scripts": {
         "build": "tsc",

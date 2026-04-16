@@ -15,6 +15,22 @@ export default defineConfig([
     {
         rules: {
             "@typescript-eslint/consistent-type-imports": "error",
+            "no-unused-vars": [
+                "warn",
+                {
+                    args: "all",
+                    argsIgnorePattern: "^_",
+                    varsIgnorePattern: "^_",
+                },
+            ],
+            "@typescript-eslint/no-unused-vars": [
+                "warn",
+                {
+                    args: "all",
+                    argsIgnorePattern: "^_",
+                    varsIgnorePattern: "^_",
+                },
+            ],
         },
         languageOptions: {
             parserOptions: {

@@ -11,7 +11,7 @@ export function emit(
     const files: OutputFile[] = [];
 
     for (const nsid of resolved.order) {
-        const doc = resolved.lexicons.get(nsid)!;
+        const doc = resolved.lexicons.get(nsid);
         const path = nsid.replace(/\./g, "/") + ".ts";
 
         // TODO: implement type-to-zod emission

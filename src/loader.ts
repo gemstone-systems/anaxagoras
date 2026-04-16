@@ -18,6 +18,6 @@ export async function load(inputDir: string): Promise<Map<string, LexiconDoc>> {
         lexicons.set(raw.id, raw);
     }
 
-    console.log(`Loaded ${lexicons.size} lexicon(s)`);
+    console.log(`Loaded ${lexicons.size.toString()} lexicon(s)`);
     return lexicons;
 }

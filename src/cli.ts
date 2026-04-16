@@ -12,7 +12,7 @@ const { values } = parseArgs({
 
 if (!values.input || !values.output) {
     console.error(
-        "Usage: anaxagoras generate --input <dir> --output <dir> [--strict] [--allow-external]",
+        "Usage: anaxa generate --input <dir> --output <dir> [--strict] [--allow-external]",
     );
     process.exit(1);
 }
@@ -20,6 +20,6 @@ if (!values.input || !values.output) {
 await generate({
     input: values.input,
     output: values.output,
-    strict: values.strict ?? false,
-    allowExternal: values["allow-external"] ?? false,
+    strict: values.strict,
+    allowExternal: values["allow-external"],
 });
