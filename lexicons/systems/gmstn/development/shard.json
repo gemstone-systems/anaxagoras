@@ -1,0 +1,28 @@
+{
+    "lexicon": 1,
+    "id": "systems.gmstn.development.shard",
+    "defs": {
+        "main": {
+            "type": "record",
+            "key": "any",
+            "record": {
+                "type": "object",
+                "properties": {
+                    "createdAt": {
+                        "type": "string",
+                        "format": "datetime",
+                        "description": "Timestamp when this Shard was registered"
+                    },
+                    "description": {
+                        "type": "string",
+                        "maxLength": 2000,
+                        "maxGraphemes": 200,
+                        "description": "(optional) Human-readable description of this Shard. Does nothing for now."
+                    }
+                },
+                "required": ["createdAt"]
+            },
+            "description": "Record defining a Shard, a message store. The record-key should be the domain where the Shard is accessible."
+        }
+    }
+}

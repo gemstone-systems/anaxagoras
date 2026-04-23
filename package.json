@@ -9,10 +9,16 @@
     "scripts": {
         "build": "tsc",
         "dev": "tsc --watch",
+        "dev:anaxa": "tsc && node ./dist/cli.js",
         "lint": "eslint .",
         "format": "prettier --write 'src/**/*.ts'"
     },
-    "keywords": ["atproto", "lexicon", "zod", "codegen"],
+    "keywords": [
+        "atproto",
+        "lexicon",
+        "zod",
+        "codegen"
+    ],
     "license": "MIT",
     "packageManager": "pnpm@10.18.0",
     "engines": {

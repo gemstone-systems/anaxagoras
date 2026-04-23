@@ -3,8 +3,8 @@ import { generate } from "./generate.js";
 
 const { values } = parseArgs({
     options: {
-        input: { type: "string", short: "i" },
-        output: { type: "string", short: "o" },
+        input: { type: "string", short: "i", default: "." },
+        output: { type: "string", short: "o", default: "__generated" },
         strict: { type: "boolean", default: false },
         "allow-external": { type: "boolean", default: false },
     },

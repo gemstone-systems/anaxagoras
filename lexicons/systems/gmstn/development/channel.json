@@ -1,0 +1,48 @@
+{
+  "lexicon": 1,
+  "id": "systems.gmstn.development.channel",
+  "defs": {
+    "main": {
+      "type": "record",
+      "key": "tid",
+      "record": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 1000,
+            "minLength": 1,
+            "maxGraphemes": 100,
+            "minGraphemes": 1,
+            "description": "The name of the channel."
+          },
+          "storeAt": {
+            "type": "ref",
+            "ref": "com.atproto.repo.strongRef",
+            "description": "The location to store the messages in this channel. Must resolve to a Shard or compatible message store."
+          },
+          "routeThrough": {
+            "type": "ref",
+            "ref": "com.atproto.repo.strongRef",
+            "description": "The service to route the messages in this channel through. Must resolve to a Lattice or compatible sync service."
+          },
+          "topic": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 1,
+            "maxGraphemes": 200,
+            "minGraphemes": 1,
+            "description": "(optional) The topic of the channel, similar to a sub-description."
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "datetime",
+            "description": "The timestamp when this channel was created."
+          }
+        },
+        "required": ["name", "storeAt", "routeThrough", "createdAt"]
+      },
+      "description": "Record declaring a conversation channel."
+    }
+  }
+}

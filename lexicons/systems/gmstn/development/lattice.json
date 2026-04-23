@@ -1,0 +1,28 @@
+{
+  "lexicon": 1,
+  "id": "systems.gmstn.development.lattice",
+  "defs": {
+    "main": {
+      "type": "record",
+      "key": "any",
+      "record": {
+        "type": "object",
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "format": "datetime",
+            "description": "Timestamp when this Lattice was registered"
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 2000,
+            "maxGraphemes": 200,
+            "description": "(optional) Human-readable description of this Lattice. Does nothing for now."
+          }
+        },
+        "required": ["createdAt"]
+      },
+      "description": "Record defining a Lattice, a real-time sync engine. The record-key should be the domain where the Shard is accessible."
+    }
+  }
+}
