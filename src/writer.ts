@@ -1,12 +1,12 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
-import type { OutputFile } from "./types.js";
+import type { OutputFile } from "./types/index.js";
 
 /**
  * Write generated .ts files to the output directory and create a barrel index.
  */
 export async function write(
-    files: OutputFile[],
+    files: Array<OutputFile>,
     outputDir: string,
 ): Promise<void> {
     for (const file of files) {

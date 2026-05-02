@@ -1,4 +1,4 @@
-import type { LexiconDoc, ResolvedLexicons } from "./types.js";
+import type { LexiconDoc, ResolvedLexicons } from "./types/index.js";
 
 /**
  *
