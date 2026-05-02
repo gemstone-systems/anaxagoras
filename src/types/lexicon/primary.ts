@@ -1,12 +1,6 @@
 import type { Enumify } from "../../utils/enumify.js";
 import type { LexiconObject, LexiconPermission } from "./fields.js";
 
-export interface LexiconDoc {
-    lexicon: number;
-    id: string;
-    defs: Record<string, LexiconDef>;
-}
-
 export const LexiconDefTypes = {
     RECORD: "record",
     QUERY: "query",
