@@ -15,6 +15,7 @@ export default defineConfig([
     {
         rules: {
             "@typescript-eslint/consistent-type-imports": "error",
+            "@typescript-eslint/array-type": ["error", { default: "generic" }],
             "no-unused-vars": [
                 "warn",
                 {

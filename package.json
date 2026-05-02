@@ -9,7 +9,7 @@
     "scripts": {
         "build": "tsc",
         "dev": "tsc --watch",
-        "dev:anaxa": "tsc && node ./dist/cli.js",
+        "dev:anaxa": "tsc && node ./dist/cli.js --input ./lexicons/",
         "lint": "eslint .",
         "format": "prettier --write 'src/**/*.ts'"
     },
